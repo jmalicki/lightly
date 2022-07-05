@@ -47,6 +47,7 @@ class _DatasourcesMixin:
             response: DatasourceRawSamplesData = download_function(
                 dataset_id=self.dataset_id,
                 cursor=cursor,
+                use_redirected_read_url=True,
                 **relevant_filenames_kwargs,
                 **kwargs
             )
