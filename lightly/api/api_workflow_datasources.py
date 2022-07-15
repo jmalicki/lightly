@@ -36,6 +36,7 @@ class _DatasourcesMixin:
             dataset_id=self.dataset_id,
             _from=from_,
             to=to,
+            use_redirected_read_url=True,
             **relevant_filenames_kwargs,
             **kwargs
         )
