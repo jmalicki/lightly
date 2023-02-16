@@ -97,7 +97,7 @@ else:
     # see if prefetch_generator is available
     try:
         import prefetch_generator
-    except ImportError:
+    except (ImportError, OSError):
         _prefetch_generator_available = False
     else:
         _prefetch_generator_available = True
@@ -109,7 +109,7 @@ else:
     try:
         import torchvision.models.vision_transformer
         _torchvision_vit_available = True
-    except ImportError:
+    except (ImportError, OSError):
         _torchvision_vit_available = False
 
     from lightly.core import *
